@@ -1,0 +1,19 @@
+{
+  "name": "finalProject1",
+  "version": "1.0.0",
+  "description": "Bsc Csit final year project",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix server && npm install --prefix client && npm run build --prefix server && npm run build --prefix client",
+    "client": "npm start --prefix client",
+    "server": "npm start -prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
