@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node build/index.js",
     "build": "tsc",
+    "build-server": "npm run build",
     "server": "nodemon --exec ts-node index.ts"
   },
   "author": "Abhishek",
