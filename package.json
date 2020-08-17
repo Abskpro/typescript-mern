@@ -10,7 +10,7 @@
     "start":"node build/index.js",
     "build":"tsc",
     "postinstall": "npm run build",
-    "heroku-postbuild": "npm run install-client && npm run build ",
+    "heroku-postbuild": "npm run postinstall && npm run install-client && npm run build ",
     "server": "nodemon --exec ts-node index.ts"
   },
   "author": "Abhishek",
