@@ -20,7 +20,7 @@ app.use(function (req: any, res: any, next: any) {
   res.setHeader('Access-Control-Allow-Credentials', true);
 
   // Pass to next layer of middleware
-  //    next();
+  next();
   //
 });
 
