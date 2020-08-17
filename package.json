@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd server && node build/index.js",
-    "postinstall": "cd server && tsc",
+    "postinstall": "npm run build --prefix server  ",
     "install-client": "cd client && npm install && npm run build",
     "heroku-postbuild": "npm run install-client"
   },
