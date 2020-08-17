@@ -5,9 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "install-client":"cd client && npm install && npm run build",
+    "start": "node build/index.js",
+    "install-client": "cd client && npm install && npm run build",
     "postinstall": "tsc",
+    "build": "tsc",
     "heroku-postbuild": "tsc && npm run install-client",
     "server": "nodemon --exec ts-node index.ts"
   },
