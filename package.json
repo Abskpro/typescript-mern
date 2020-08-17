@@ -7,7 +7,7 @@
     "start": "cd server && node build/index.js",
     "postinstall": "cd server && npm run build",
     "install-client": "cd client && npm install && npm run build",
-    "heroku-postbuild": "cd server && tsc && npm run install-client"
+    "heroku-postbuild": "npm run install-client"
   },
   "repository": {
     "type": "git",
