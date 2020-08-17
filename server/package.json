@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts",
+    "start": "node dist/index.ts",
+    "build": "tsc",
+    "postinstall": "npm run build",
     "server": "nodemon --exec ts-node index.ts"
   },
   "author": "Abhishek",

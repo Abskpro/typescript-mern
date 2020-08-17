@@ -1,1 +1,1 @@
-web: node ./server/src/index.ts
+web: npm start --prefix server
