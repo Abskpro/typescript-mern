@@ -4,7 +4,7 @@
   "description": "Bsc Csit final year project",
   "main": "index.js",
   "scripts": {
-    "start": "npm start --prefix server",
+    "start": "cd server && npm start",
     "postinstall": "tsc ",
     "build": "tsc",
     "install-client": "cd client && npm install && npm run build",
