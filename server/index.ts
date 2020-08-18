@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const path = require('path');
+const log = require('routes/log.ts');
 
 app.use(cors());
 
@@ -24,8 +25,10 @@ app.use(function (req: any, res: any, next: any) {
   //
 });
 
+console.log(log);
+
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.resolve(__dirname,"../../client","build")));
+  app.use(express.static(path.resolve(__dirname, '../../client', 'build')));
   app.get('*', (req: any, res: any) => {
     res.sendFile(
       path.resolve(__dirname, '../../client', 'build', 'index.html'),
