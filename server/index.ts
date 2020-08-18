@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const path = require('path');
+const data = require('./routes/log');
 
 app.use(cors());
 
@@ -23,6 +24,8 @@ app.use(function (req: any, res: any, next: any) {
   next();
   //
 });
+
+console.log(data());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, '../../client', 'build')));
