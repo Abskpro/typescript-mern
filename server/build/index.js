@@ -3,7 +3,6 @@ var express = require('express');
 var cors = require('cors');
 var app = express();
 var path = require('path');
-var log = require('routes/log.ts');
 app.use(cors());
 var port = process.env.PORT || 7000;
 app.use(function (req, res, next) {
@@ -15,7 +14,6 @@ app.use(function (req, res, next) {
     next();
     //
 });
-console.log(log);
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve(__dirname, '../../client', 'build')));
     app.get('*', function (req, res) {

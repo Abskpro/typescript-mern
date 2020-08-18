@@ -24,7 +24,6 @@ app.use(function (req: any, res: any, next: any) {
   //
 });
 
-
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, '../../client', 'build')));
   app.get('*', (req: any, res: any) => {
