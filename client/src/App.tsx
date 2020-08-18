@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Greet from './components/greetings';
 
-function App() {
+const App:React.FC = ()  =>{
   return (
     <div className="App">
       <h1>hello world welcome to my world</h1>
